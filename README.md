@@ -6,39 +6,35 @@
     <title>User Management System Backend</title>
 </head>
 <body>
-    <h1>User Management System Backend</h1>
+   <h1>User Management System Backend</h1>
 
-    <p>This repository contains the backend implementation for a User Management System using Laravel 11.</p>
+<p>This repository contains the backend implementation for a User Management System using Laravel 11.</p>
 
-    <h2>Table of Contents</h2>
-    <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-        <li><a href="#configuration">Configuration</a></li>
-        <ul>
-            <li><a href="#environment-setup">Environment Setup</a></li>
-            <li><a href="#database-configuration">Database Configuration</a></li>
-        </ul>
-        <li><a href="#running-tests">Running Tests</a></li>
-        <li><a href="#endpoints">Endpoints</a></li>
-        <li><a href="#license">License</a></li>
-    </ul>
+## Table of Contents
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+  - [Clone the repository](#clone-the-repository)
+  - [Install dependencies](#install-dependencies)
+- [Configuration](#configuration)
+  - [Environment Setup](#environment-setup)
+  - [Database Configuration](#database-configuration)
+- [Running Tests](#running-tests)
+- [Endpoints](#endpoints)
+- [License](#license)
 
-    <h2 id="prerequisites">Prerequisites</h2>
-    <p>Before you begin, ensure you have the following installed:</p>
-    <ul>
-        <li>PHP >= 8.2</li>
-        <li>Composer</li>
-        <li>MySQL (or any supported database)</li>
-        <li>PHPUnit</li>
-    </ul>
+## Prerequisites
+Before you begin, ensure you have the following installed:
+- PHP >= 8.2
+- Composer
+- MySQL (or any supported database)
+- PHPUnit
 
-    <h2 id="installation">Installation</h2>
-    <ol>
-        <li>Clone the repository:</li>
-        <code>git clone https://github.com/VictoriaReyes1803/UserSystemBackend.git</code>
-        <code>cd UserSystemBackend</code>
-        <code>cd UserManagementSystem</code>
+## Installation
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/VictoriaReyes1803/UserSystemBackend.git
+   cd UserSystemBackend
+   cd UserManagementSystem
         
         <li>Install dependencies:</li>
         <code>composer install</code>
