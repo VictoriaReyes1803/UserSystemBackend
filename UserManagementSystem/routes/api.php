@@ -27,6 +27,6 @@ Route::group(['prefix' => 'auth'], function () {
         Route::get('me', [AuthController::class, 'me']);
         Route::put('update/{id}', [UserController::class, 'update']);
         Route::delete('delete/{id}', [UserController::class, 'destroy']);
-        Route::get('logout', [AuthController::class, 'logout']);
+        Route::post('logout', [AuthController::class, 'logout']);
     });
 });

@@ -59,7 +59,7 @@ class AuthController extends Controller
             }
         }
     
-        public function verificarcodigo(Request $request)
+        public function verifycode(Request $request)
         {
             $validator = Validator::make($request->all(), [
                 'verification_code' => 'required|string|min:6|max:6',
@@ -93,13 +93,16 @@ class AuthController extends Controller
          * @return \Illuminate\Http\JsonResponse
          */
         public function logout()
-        {
+        { 
             $user = Auth::guard('api')->user();
             //$user->token_verificacion = null;
-            $user->save();
+            //$user->save();
     
-            Auth::guard('api')->logout();
-            return response()->json(['message' => 'Successfully logged out']);
+            if ($user) { 
+                Auth::guard('api')->logout();
+                return response()->json(['message' => 'Successfully logged out'],200);
+            }
+            return response()->json(['message' => 'User not authenticated or not active'], 401);
         }
     
         /**
