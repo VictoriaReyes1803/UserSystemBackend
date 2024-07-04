@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Management System Backend</title>
+    <h2>User Management System Backend</h2>
 </head>
 <body>
    <h1>User Management System Backend</h1>
@@ -36,8 +36,10 @@ Before you begin, ensure you have the following installed:
    cd UserSystemBackend
    cd UserManagementSystem
    ```
-        <li>Install dependencies:</li>
-        <code>composer install</code>
+    2. **Install dependencies:**
+       ```bash
+        composer install
+        ```
     </ol>
 
     <h2 id="configuration">Configuration</h2>
@@ -62,8 +64,8 @@ Before you begin, ensure you have the following installed:
         DB_USERNAME=your_database_user
         DB_PASSWORD=your_database_password
                 </code></pre>
-                <li>Migrate the database:</li>
-                <code>php artisan migrate</code>
+        <li>Migrate the database:</li>
+        <code>php artisan migrate</code>
             </ol>
     <h2>Running the Api</h2>
         <ol>
