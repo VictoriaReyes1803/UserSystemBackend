@@ -31,16 +31,20 @@ class AuthController extends Controller
             'email' => 'required|email',
             'password' => 'required|min:3',
         ]);
-        //Log::info($request->all());
+        Log::info($request->all());
         if ($validator->fails()) {
+            log::info($validator->errors());
             return response()->json(['error' => $validator->errors()], 422);
         }
+        
+
         $credentials = $request->only('email', 'password');
         $user = User::where('email', $request->email)->first();
         if (!$user) {
             return response()->json(['error' => 'Email not found or password incorrect'], 404);
         }
         if (!$token = auth('api')->attempt($credentials)) {
+            log::info('j',$token);
             return response()->json(['error' => 'Unauthorized'], 401);
         }
         return $this->respondWithToken($token);

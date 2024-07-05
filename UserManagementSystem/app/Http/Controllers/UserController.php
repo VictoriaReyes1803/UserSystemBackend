@@ -29,7 +29,7 @@ class UserController extends Controller
     * @return \Illuminate\Http\JsonResponse
     */
     public function index()
-    {
+    {   
         $users = User::all();
         return response()->json($users);
     }
@@ -46,6 +46,7 @@ class UserController extends Controller
             'password' => 'required|string',
         ]);
         if ($validator->fails()) {
+            log::info($validator->errors());
             return response()->json(['error' => $validator->errors()], 422);
         } else {
            $user = new User;
